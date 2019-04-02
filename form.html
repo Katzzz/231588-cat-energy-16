@@ -24,6 +24,102 @@
 
   <main class="form">
 
+    <div class="form__legend">
+      <h1 class="form__title">Подбор программы</h1>
+      <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+    </div>
+
+    <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
+
+      <fieldset class="form__item">
+        <legend class="form__item-title visually-hidde">Анкета</legend>
+        <ul class="form__list">
+            <li class="form__list-item">
+              <label for="name">Имя:*</label>
+              <input type="text" id="name" name="name" placeholder="Барсик" required>
+            </li>
+            <li class="form__list-item">
+              <label for="weight">Вес (кг):*</label>
+              <input type="text" id="weight" name="weight" placeholder="7" required>
+            </li>
+            <li class="form__list-item">
+              <label for="age">Возраст (лет):</label>
+              <input type="text" id="age" name="age" placeholder="7">
+            </li>
+          </ul>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__item-title visually-hidde">Причина</legend>
+        <ul class="form__list">
+          <li class="form__list-item">
+            <input type="radio" id="diet" name="diet" checked>
+            <label for="diet">Похудение</label>
+          </li>
+          <li class="form__list-item">
+           <input type="radio" id="fat" name="fat">
+           <label for="fat">Набор массы</label>
+          </li>
+          <li class="form__list-item">
+           <input type="radio" id="unknown" name="unknown">
+           <label for="unknown">Не знаю (нужен Ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__item-title">Контактные данные (владельца кота)</legend>
+        <ul class="form__list">
+         <li class="form__list-item">
+          <label for="email">Email:*</label>
+          <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+         </li>
+         <li class="form__list-item">
+           <label for="phone">Телефон:*</label>
+           <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+         </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__item-title">Комментарий</legend>
+        <textarea id="comment" name="comment"></textarea>
+        <label for="comment">Расскажите обо всех поводках кота</label>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__item-title">Дополнительно</legend>
+        <ul class="form__list">
+          <li class="form__list-item">
+            <input type="checkbox" id="sugar" name="sugar" checked>
+            <label for="sugar">Сахарозаменитель</label>
+          </li>
+          <li class="form__list-item">
+            <input type="checkbox" id="water" name="water">
+            <label for="water">Питьевая вода</label>
+          </li>
+          <li class="form__list-item">
+            <input type="checkbox" id="milk" name="milk">
+            <label for="milk">Молоко</label>
+          </li>
+          <li class="form__list-item">
+            <input type="checkbox" id="vitamins" name="vitamins">
+            <label for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button type="submit" class="form__btn btn">Отправить заявку</button>
+      <span class="form__comment">*Обязательные поля</span>
+
+    </form>
+
+    <section class="page-map">
+      <p>Приглашаем к сотрудничеству дилеров!</p>
+      <p>ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+      <img src="http://placehold.it/30x30">
+    </section>
+
   </main>
 
   <footer class="page-footer">
