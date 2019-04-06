@@ -1,0 +1,58 @@
+.page-catalog__list {
+  .no-list-style()
+}
+
+.page-catalog__list-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 40px;
+
+  background-color: @default-grey;
+}
+
+.page-catalog__title {
+  padding-left: 92px;
+
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #111111;
+
+  &--diet::before,
+  &--fat::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @default-green;
+  }
+
+  &--diet::after,
+  &--fat::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+
+    background-repeat: no-repeat;
+    z-index: 99;
+  }
+
+  &--diet::after {
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--fat::after {
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.page-catalog__text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
