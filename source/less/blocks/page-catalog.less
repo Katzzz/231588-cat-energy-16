@@ -1,22 +1,26 @@
+.page-catalog {
+  .container();
+}
+
 .page-catalog__list {
-  .no-list-style()
+  .no-list-style();
 }
 
 .page-catalog__list-item {
   position: relative;
   margin-bottom: 20px;
-  padding-top: 40px;
+  padding: 40px 20px 22px 20px;
 
   background-color: @default-grey;
 }
 
 .page-catalog__title {
-  padding-left: 92px;
+  padding-left: 70px;
+  padding-bottom: 40px;
 
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  color: #111111;
 
   &--diet::before,
   &--fat::before {
@@ -52,7 +56,16 @@
 }
 
 .page-catalog__text {
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid @darken-grey;
+}
+
+.page-catalog__btn {
+  display: block;
+  padding-top: 23px;
+
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
 }

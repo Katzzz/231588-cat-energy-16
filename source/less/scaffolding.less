@@ -6,17 +6,19 @@
 @font-face {
   font-family: "Oswald";
   src: local("Oswald Regular"),
-       url("../fonts/oswaldmedium.woff") format("woff"),
-       url("../fonts/oswaldmedium.woff2") format("woff2"),
-       url("../fonts/oswaldregular.woff") format("woff"),
-       url("../fonts/oswaldregular.woff2") format("woff2");
+  //  url("../fonts/oswaldmedium.woff") format("woff"),
+  //  url("../fonts/oswaldmedium.woff2") format("woff2"),
+   url("../fonts/oswaldregular.woff") format("woff"),
+   url("../fonts/oswaldregular.woff2") format("woff2");
 }
 
 body {
   min-width: 320px;
   margin: 0;
-  font-size: 15px;
-  line-height: 24px;
+
+  color: @default-black;
+  font-size: 14px;
+  line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
 }
 
@@ -27,12 +29,17 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 36px;
+  line-height: 60px;
+}
+
+p {
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: @default-black;
 }
 
 fieldset {
@@ -44,3 +51,4 @@ button {
   border: none;
   background: transparent;
 }
+
