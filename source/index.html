@@ -13,8 +13,12 @@
 
       <div class="page-header__wrapper">
         <div class="page-header__top">
-          <div class="page-header__logo logo">
-            <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
+          <div class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
+            </picture>
           </div>
           <nav class="page-header__nav main-nav main-nav--closed">
             <button type="button" class="main-nav__hamburger-box">Меню</button>
@@ -43,13 +47,13 @@
           <li class="page-catalog__list-item">
             <h2 class="page-catalog__title page-catalog__title--diet">Похудение</h2>
             <p class="page-catalog__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="page-catalog__btn" href="catalog.html" >Каталог SLIM</a>
+            <a class="page-catalog__btn" href="catalog-slim.html" >Каталог SLIM</a>
           </li>
           <li class="page-catalog__list-item">
               <h2 class="page-catalog__title page-catalog__title--fat">Набор массы</h2>
               <p class="page-catalog__text">Заработать авторитет среди дворовых котов и даже собак?
                   Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="page-catalog__btn" href="catalog.html">Каталог PRO</a>
+              <a class="page-catalog__btn" href="catalog-pro.html">Каталог PRO</a>
           </li>
         </ul>
       </section>
@@ -81,25 +85,28 @@
 
       <section class="page-map">
         <div class="page-map__wrapper">
-          <p class="page-map__text">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="page-map__text page-map__text--bold">Приглашаем к сотрудничеству дилеров!</p>
           <p class="page-map__text">ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
         </div>
-        <img src="http://placehold.it/30x30">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e0746d656fa574c6a98136c533c2cbc1be9a3223696308095e6e4b7dbdcdd09&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
 
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <img src="http://placehold.it/30x30">
+          <img src="img/logo-footer.svg" alt="Cat energy" width="128" height="24">
         </div>
-      <div class="page-footer__social">
-        <a href="#" class="social-link social-link--vkontakte">Мы в Вконтакте</a>
-        <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
-        <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>
-      </div>
-      <div class="page-footer__copyright">HTML Academy
-        <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy"></a>
+        <div class="page-footer__social">
+          <a href="#" class="social-link social-link--vkontakte"><span>Мы в Вконтакте</span></a>
+          <a href="#" class="social-link social-link--instagram"><span>Мы в Инстаграм</span></a>
+          <a href="#" class="social-link social-link--facebook"><span>Мы в Фейсбук</span></a>
+        </div>
+        <div class="page-footer__copyright">
+          <span>HTML Academy</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" height="36" width="28" alt="HTML Academy"></a>
+        </div>
       </div>
     </footer>
 
