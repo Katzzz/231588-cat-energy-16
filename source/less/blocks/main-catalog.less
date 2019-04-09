@@ -1,0 +1,44 @@
+.main-catalog__item {
+  .container();
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid @default-grey;
+}
+
+.main-catalog__image {
+  flex-basis: 50%;
+  align-self: center;
+}
+
+.main-catalog__desc {
+  flex-basis: 50%;
+}
+
+.main-catalog__btn {
+  flex-basis: 100%;
+}
+
+.main-catalog__title {
+  width: 75px;
+  padding-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-catalog__table {
+  &--value {
+    width: 70px;
+
+    text-align: left;
+  }
+  &--quantity {
+    width: 70px;
+
+    text-align: right;
+  }
+}

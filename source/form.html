@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Cat Energy</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 </html>
 
@@ -10,14 +12,19 @@
 
   <header class="page-header">
 
-    <div class="page-header__top">
-      <div class="page-header__logo logo">
-        <img class="page-header__logo-image logo__image" src="http://placehold.it/30x30">
-        <p class="page-header__logo-text logo__text"><strong>Cat</strong>energy</p>
+    <div class="page-header__wrapper">
+      <div class="page-header__top">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
+          </picture>
+        </a>
+        <nav class="page-header__nav main-nav main-nav--closed">
+          <button type="button" class="main-nav__hamburger-box">Меню</button>
+        </nav>
       </div>
-      <nav class="page-header__nav main-nav main-nav--closed">
-        <button type="button" class="main-nav__hamburger-box">Меню</button>
-      </nav>
     </div>
 
   </header>
@@ -115,25 +122,29 @@
     </form>
 
     <section class="page-map">
-      <p>Приглашаем к сотрудничеству дилеров!</p>
-      <p>ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
-      <img src="http://placehold.it/30x30">
+      <div class="page-map__wrapper">
+        <p class="page-map__text page-map__text--bold">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="page-map__text">ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+      </div>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e0746d656fa574c6a98136c533c2cbc1be9a3223696308095e6e4b7dbdcdd09&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__logo logo">
-      <img class="page-footer__logo-image logo__image visually-hidde" src="http://placehold.it/30x30">
-      <p class="page-footer__logo-text logo__text"><strong>Cat</strong>energy</p>
-    </div>
-    <div class="page-footer__social">
-      <a href="#" class="social-link social-link--vkontakte">Мы в Вконтакте</a>
-      <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
-      <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>
-    </div>
-    <div class="page-footer__copyright">HTML Academy
-      <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy"></a>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo logo">
+        <img src="img/logo-footer.svg" alt="Cat energy" width="128" height="24">
+      </div>
+      <div class="page-footer__social">
+        <a href="#" class="social-link social-link--vkontakte"><span>Мы в Вконтакте</span></a>
+        <a href="#" class="social-link social-link--instagram"><span>Мы в Инстаграм</span></a>
+        <a href="#" class="social-link social-link--facebook"><span>Мы в Фейсбук</span></a>
+      </div>
+      <div class="page-footer__copyright">
+        <span>HTML Academy</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" height="36" width="28" alt="HTML Academy"></a>
+      </div>
     </div>
   </footer>
 
