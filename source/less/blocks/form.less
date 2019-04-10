@@ -1,0 +1,95 @@
+.form__title {
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  line-height: 60px;
+}
+
+.form__legend {
+  .container();
+}
+
+.form__legend-text {
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.form__item {
+  .container();
+  border-bottom: 1px solid @default-grey;
+}
+
+.form__item-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form__list {
+  .no-list-style();
+
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+.form__list-item {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+
+  padding-bottom: 15px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+
+  label {
+    padding-right: 5px;
+  }
+
+  input[type="text"] {
+    flex-grow: 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    border: 1px solid @default-grey;
+  }
+
+  &--radio {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--radio input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 7px;
+    left: 0;
+    border: 2px solid @default-grey;
+    border-radius: 50%;
+  }
+
+  &--radio input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 19px;
+    left: 12px;
+    border-radius: 50%;
+    background-color: @default-green;
+  }
+}
+
+.form__btn {
+  width: 100%;
+}
