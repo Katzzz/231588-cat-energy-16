@@ -4,12 +4,19 @@
 }
 
 @font-face {
+  font-weight: normal;
   font-family: "Oswald";
   src: local("Oswald Regular"),
-  //  url("../fonts/oswaldmedium.woff") format("woff"),
-  //  url("../fonts/oswaldmedium.woff2") format("woff2"),
    url("../fonts/oswaldregular.woff") format("woff"),
    url("../fonts/oswaldregular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 200;
+  font-family: "Oswald";
+  src: local("Oswald Regular"),
+   url("../fonts/oswaldmedium.woff") format("woff"),
+   url("../fonts/oswaldmedium.woff2") format("woff2"),
 }
 
 body {
@@ -35,6 +42,8 @@ h2 {
 }
 
 p {
+  font-size: 12px;
+  line-height: 16px;
   font-family: "Arial", "Helvetica", sans-serif;
 }
 
@@ -52,6 +61,11 @@ fieldset {
   border: none;
 }
 
+legend {
+  font-size: 24px;
+  line-height: 24px;
+}
+
 button {
   border: none;
   background: transparent;
@@ -61,6 +75,10 @@ table {
   font-size: 12px;
   line-height: 16px;
   font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.visually-hidden {
+  font-size: 0;
 }
 
 

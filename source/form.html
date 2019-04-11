@@ -33,13 +33,13 @@
 
     <div class="form__legend">
       <h1 class="form__title">Подбор программы</h1>
-      <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="form__legend-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
     </div>
 
     <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
       <fieldset class="form__item">
-        <legend class="form__item-title visually-hidde">Анкета</legend>
+        <legend class="visually-hidden">Анкета</legend>
         <ul class="form__list">
             <li class="form__list-item">
               <label for="name">Имя:*</label>
@@ -57,17 +57,17 @@
       </fieldset>
 
       <fieldset class="form__item">
-        <legend class="form__item-title visually-hidde">Причина</legend>
+        <legend class="visually-hidden">Причина</legend>
         <ul class="form__list">
-          <li class="form__list-item">
+          <li class="form__list-item form__list-item--radio">
             <input type="radio" id="diet" name="diet" checked>
             <label for="diet">Похудение</label>
           </li>
-          <li class="form__list-item">
+          <li class="form__list-item form__list-item--radio">
            <input type="radio" id="fat" name="fat">
            <label for="fat">Набор массы</label>
           </li>
-          <li class="form__list-item">
+          <li class="form__list-item form__list-item--radio">
            <input type="radio" id="unknown" name="unknown">
            <label for="unknown">Не знаю (нужен Ваш совет)</label>
           </li>
