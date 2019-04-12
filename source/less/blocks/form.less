@@ -1,0 +1,148 @@
+.form__title {
+  padding-top: 100px;
+  padding-bottom: 35px;
+
+  line-height: 60px;
+}
+
+.form__legend {
+  .container();
+}
+
+.form__legend-text {
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.form__item {
+  .container();
+  border-bottom: 1px solid @input-border-color;
+
+  color: @lighten-font-color;
+
+  textarea {
+    width: 250px;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    resize: unset;
+    .placeholder();
+  }
+}
+
+.form__item-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form__list {
+  .no-list-style();
+
+  & input[type="radio"],
+  & input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.form__list-item {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+
+  padding-bottom: 15px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+
+  label {
+    padding-right: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    flex-grow: 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    border: 1px solid @input-border-color;
+    text-transform: uppercase;
+    color: @light-font-color;
+  }
+
+  &----radio,
+  &--checkbox {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.form__list-item input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 7px;
+  left: 0;
+  border: 2px solid @input-border-color;
+  border-radius: 50%;
+}
+
+.form__list-item input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 19px;
+  left: 12px;
+  border-radius: 50%;
+  background-color: @default-green;
+}
+
+// .form__list-item input[type="radio"] + label:hover::before {
+//   box-shadow: 5px 10px 2px 3px #727272;
+// }
+
+// .form__list-item input[type="radio"]:active + label::before {
+//   border-color: @default-green;
+// }
+
+.form__list-item input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 3px;
+  left: 0;
+
+  border: 2px solid @input-border-color;
+}
+
+.form__list-item input[type="checkbox"]:checked + label::after {
+  content: url("../img/icon-tick.svg");
+  position: absolute;
+  width: 3px;
+  height: 26px;
+  top: 10px;
+  left: 3px;
+}
+
+// .form__list input[type="checkbox"] + label:hover::before {
+//   border-color: @base-color-lighten;
+// }
+
+// .form__list input[type="checkbox"]:active + label::before {
+//   border-color: @grey-light;
+// }
+
+.form__btn {
+  width: 100%;
+}

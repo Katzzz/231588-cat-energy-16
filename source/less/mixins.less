@@ -10,3 +10,40 @@
 
   list-style: none;
 }
+
+.placeholder() {
+  &::-webkit-input-placeholder {
+    text-transform: uppercase;
+    color: @light-font-color;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &::-moz-placeholder {
+    text-transform: uppercase;
+    color: @light-font-color;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &:-moz-placeholder {
+    text-transform: uppercase;
+    color: @light-font-color;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &::-ms-input-placeholder {
+    text-transform: uppercase;
+    color: @light-font-color;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &:-ms-input-placeholder {
+    text-transform: uppercase;
+    color: @light-font-color;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
