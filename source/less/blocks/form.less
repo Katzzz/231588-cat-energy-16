@@ -1,5 +1,5 @@
 .form__title {
-  padding-top: 100px;
+  padding-top: 30px;
   padding-bottom: 35px;
 
   line-height: 60px;
@@ -20,17 +20,23 @@
 
 .form__item {
   .container();
-  border-bottom: 1px solid @input-border-color;
 
   color: @lighten-font-color;
 
   textarea {
-    width: 250px;
+    width: 251px;
+    min-height: 150px;
     padding: 15px;
     margin-bottom: 30px;
 
     resize: unset;
+    border: 1px solid @input-border-color;
     .placeholder();
+  }
+
+  &--underlined {
+    border-top: 1px solid @input-border-color;
+    border-bottom: 1px solid @input-border-color;
   }
 }
 
@@ -75,13 +81,16 @@
     color: @light-font-color;
   }
 
-  &----radio,
+  &--radio,
   &--checkbox {
     display: block;
     position: relative;
     padding-left: 45px;
     padding-top: 15px;
     padding-bottom: 15px;
+    &:last-child {
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -120,7 +129,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 3px;
+  top: 7px;
   left: 0;
 
   border: 2px solid @input-border-color;
@@ -129,10 +138,12 @@
 .form__list-item input[type="checkbox"]:checked + label::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
-  width: 3px;
-  height: 26px;
-  top: 10px;
-  left: 3px;
+  width: 23px;
+  height: 17px;
+  top: 15px;
+  left: 6px;
+
+  fill: @base-color;
 }
 
 // .form__list input[type="checkbox"] + label:hover::before {
@@ -143,6 +154,19 @@
 //   border-color: @grey-light;
 // }
 
+.form__wrapper {
+  .container();
+}
+
 .form__btn {
   width: 100%;
+}
+
+.form__comment {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 34px;
+  text-align: center;
+  color: @light-font-color;
+  line-height: 16px;
 }
