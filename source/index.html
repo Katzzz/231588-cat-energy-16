@@ -11,28 +11,31 @@
 
     <header class="page-header">
 
-      <div class="page-header__wrapper">
-        <div class="page-header__top">
-          <div class="page-header__logo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
-            </picture>
-          </div>
-          <nav class="page-header__nav main-nav main-nav--closed">
-            <button type="button" class="main-nav__hamburger-box">Меню</button>
-          </nav>
+
+      <div class="page-header__top">
+        <div class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
+          </picture>
         </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button type="button" class="main-nav__hamburger-box">Меню</button>
+          <ul class="main-nav__list-items">
+            <li><a class="main-nav__list-item">Главная</a></li>
+            <li><a class="main-nav__list-item" href="catalog.html">Каталог продукции</a></li>
+            <li><a class="main-nav__list-item" href="form.html">Подбор программы</a></li>
+          </ul>
+        </nav>
       </div>
+
 
       <div class="page-header__bottom">
         <div class="page-header__promo">
           <p class="page-header__title">Функциональное питание для котов</p>
           <p class="page-header__text">Занялся собой? Займись котом!</p>
-        </div>
-        <div class="page-header__wrapper">
-            <a href="form.html" class="page-header__btn btn">Подобрать программу</a>
+          <a href="form.html" class="page-header__btn btn">Подобрать программу</a>
         </div>
       </div>
 
@@ -107,6 +110,8 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="./js/hamburger-box.js"></script>
 
   </body>
 
