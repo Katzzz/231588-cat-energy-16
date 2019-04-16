@@ -89,18 +89,13 @@
   }
 
   .page-header__bottom {
-    position: relative;
-
     &::before {
-      content: "";
-      position: absolute;
       width: 706px;
       height: 609px;
       top: 210px;
       left: 25px;
 
       background-image: url("../img/index-can-tablet@1x.jpg");
-      background-repeat: no-repeat;
     }
   }
 
@@ -135,5 +130,43 @@
     position: static;
     width: 225px;
     margin-left: 90px;
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 720px;
+      height: 696px;
+      right: 0;
+      position: absolute;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: @default-green;
+      background-position: center 20%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .page-header__top {
+    .container();
+    justify-content: space-between;
+  }
+
+  .page-header__title {
+    padding-top: 115px;
+  }
+
+  .page-header__bottom {
+    &::before {
+      width: 552px;
+      height: 499px;
+      top: 210px;
+      right: 25px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+    }
   }
 }

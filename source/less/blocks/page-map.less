@@ -21,3 +21,53 @@
     text-transform: uppercase;
   }
 }
+
+@media @tablet-widths {
+  .page-map__wrapper {
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    div {
+      flex-basis: 150px;
+    }
+
+    & > div:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  .page-map__text {
+    &--aside {
+      padding-top: 20px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-map {
+    position: relative;
+  }
+
+  .page-map__wrapper {
+    position: absolute;
+    width: 405px;
+    padding-left: 75px;
+    padding-right: 85px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    top: 95px;
+    left: 110px;
+    z-index: 99;
+
+    background-color: #ffffff;
+
+    div {
+      width: 285px;
+    }
+
+    & > div:nth-child(2) {
+      text-align: left;
+    }
+  }
+}
