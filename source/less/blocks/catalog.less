@@ -6,19 +6,6 @@
   border-bottom: 1px solid @default-grey;
 }
 
-.catalog__show-all {
-  padding-top: 62px;
-  border-bottom: 1px solid @default-grey;
-
-  &--uppercase {
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
-
 .catalog__wrapper {
   .container();
   display: flex;
@@ -58,4 +45,28 @@
   line-height: 20px;
   color: #ffffff;
   text-align: center;
+}
+
+@media @tablet-widths {
+  .catalog__title {
+    padding-top: 65px;
+    padding-bottom: 80px;
+    border: none;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .catalog__promo {
+    margin: 0;
+  }
+
+  .catalog__promo-img {
+    min-height: 200xp;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .catalog__promo-text {
+    width: 165px;
+    padding: 0;
+  }
 }
