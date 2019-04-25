@@ -30,7 +30,7 @@
 
 .catalog__promo-img {
   background-color: @base-color;
-  background-image: url('../img/gift-photo-mobile@1x.jpg');
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -57,16 +57,26 @@
   }
 
   .catalog__promo {
-    margin: 0;
+    margin-bottom: 75px;
   }
 
   .catalog__promo-img {
-    min-height: 200xp;
+    position: relative;
+    min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
   }
 
   .catalog__promo-text {
+    position: absolute;
+    top: 75px;
+    right: 125px;
     width: 165px;
     padding: 0;
+
+    text-align: left;
   }
+}
+
+@media @desktop-widths {
+
 }

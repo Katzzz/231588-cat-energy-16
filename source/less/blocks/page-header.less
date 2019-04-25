@@ -136,22 +136,6 @@
 }
 
 @media @desktop-widths {
-  .page-header {
-    position: relative;
-
-    &::before {
-      content: "";
-      width: 720px;
-      height: 696px;
-      right: 0;
-      position: absolute;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-color: @default-green;
-      background-position: center 20%;
-      background-repeat: no-repeat;
-    }
-  }
-
   .page-header__title {
     padding-top: 115px;
   }
@@ -164,6 +148,21 @@
       right: 25px;
 
       background-image: url("../img/index-can-desktop@1x.png");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      right: 0;
+      top: -73px;
+      z-index: -99;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: @default-green;
+      background-position: center 20%;
+      background-repeat: no-repeat;
     }
   }
 }
