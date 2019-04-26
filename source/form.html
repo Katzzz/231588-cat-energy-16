@@ -43,45 +43,47 @@
 
       <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
-        <fieldset class="form__item">
-          <legend class="visually-hidden">Анкета</legend>
-          <ul class="form__list">
-              <li class="form__list-item">
-                <label for="name">Имя:*</label>
-                <input type="text" id="name" name="name" placeholder="Барсик" required>
+        <div class="form__profile">
+          <fieldset class="form__profile-item">
+            <legend class="visually-hidden">Анкета</legend>
+            <ul class="form__list">
+                <li class="form__list-item">
+                  <label for="name">Имя:*</label>
+                  <input type="text" id="name" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="form__list-item">
+                  <label for="weight">Вес (кг):*</label>
+                  <input type="text" id="weight" name="weight" placeholder="7" required>
+                </li>
+                <li class="form__list-item">
+                  <label for="age">Возраст (лет):</label>
+                  <input type="text" id="age" name="age" placeholder="7">
+                </li>
+              </ul>
+          </fieldset>
+
+          <fieldset class="form__profile-item form__profile-item--underlined">
+            <legend class="visually-hidden">Причина</legend>
+            <ul class="form__list">
+              <li class="form__list-item form__list-item--radio">
+                <input type="radio" id="diet" name="reasons" checked>
+                <label for="diet">Похудение</label>
               </li>
-              <li class="form__list-item">
-                <label for="weight">Вес (кг):*</label>
-                <input type="text" id="weight" name="weight" placeholder="7" required>
+              <li class="form__list-item form__list-item--radio">
+              <input type="radio" id="fat" name="reasons">
+              <label for="fat">Набор массы</label>
               </li>
-              <li class="form__list-item">
-                <label for="age">Возраст (лет):</label>
-                <input type="text" id="age" name="age" placeholder="7">
+              <li class="form__list-item form__list-item--radio">
+              <input type="radio" id="unknown" name="reasons">
+              <label for="unknown">Не знаю (нужен Ваш совет)</label>
               </li>
             </ul>
-        </fieldset>
-
-        <fieldset class="form__item form__item--underlined">
-          <legend class="visually-hidden">Причина</legend>
-          <ul class="form__list">
-            <li class="form__list-item form__list-item--radio">
-              <input type="radio" id="diet" name="reasons" checked>
-              <label for="diet">Похудение</label>
-            </li>
-            <li class="form__list-item form__list-item--radio">
-            <input type="radio" id="fat" name="reasons">
-            <label for="fat">Набор массы</label>
-            </li>
-            <li class="form__list-item form__list-item--radio">
-            <input type="radio" id="unknown" name="reasons">
-            <label for="unknown">Не знаю (нужен Ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          </fieldset>
+        </div>
 
         <fieldset class="form__item">
           <legend class="form__item-title">Контактные данные (владельца кота)</legend>
-          <ul class="form__list">
+          <ul class="form__list form__list--contacts">
           <li class="form__list-item">
             <label for="email">Email:*</label>
             <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -100,7 +102,7 @@
 
         <fieldset class="form__item">
           <legend class="form__item-title">Дополнительно</legend>
-          <ul class="form__list form__list--flex-block">
+          <ul class="form__list form__list--additional">
             <li class="form__list-item form__list-item--checkbox">
               <input type="checkbox" id="sugar" name="sugar" checked>
               <label for="sugar">Сахарозаменитель</label>

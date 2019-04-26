@@ -14,8 +14,12 @@
 
   font-size: 14px;
   line-height: 18px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: inherit;
   text-transform: uppercase;
+}
+
+.form__profile {
+  .container();
 }
 
 .form__item {
@@ -186,22 +190,14 @@
   }
 
   .form__item {
-    margin-right: 40px;
-    width: 630px;
+    margin-left: 40px;
 
     textarea {
       width: 597px;
     }
   }
 
-  .form__item--underlined {
-    border: none;
-  }
-
-  .form__item--underlined ul {
-    padding-left: 28px;
-    padding-top: 15px;
-
+  .form__profile-item--underlined .form__list {
     border: 1px solid @input-border-color;
   }
 
@@ -211,7 +207,7 @@
   }
 
   .form__list {
-    &--flex-block {
+    &--additional {
       display: flex;
       flex-wrap: wrap;
 
@@ -230,7 +226,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 40px;
   }
 
   .form__btn {
@@ -244,13 +239,53 @@
 }
 
 @media @desktop-widths {
-  .form__items {
+  .form__legend-text {
+    padding-left: 0;
+  }
+
+  .form__profile {
     display: flex;
     flex-wrap: wrap;
+
+    fieldset {
+      flex-basis: 530px;
+
+      &:first-child {
+        padding-right: 80px;
+      }
+    }
+  }
+
+  .form__list {
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex-basis: 530px;
+      }
+
+      & li:first-child {
+        margin-right: 80px;
+      }
+    }
+
+    &--additional {
+      li {
+        flex-basis: 20%;
+      }
+    }
   }
 
   .form__item {
-    margin-right: 0;
+    margin-left: auto;
+
+    textarea {
+      width: 1106px;
+    }
+  }
+
+  .form__btn {
     width: 570px;
   }
 }
