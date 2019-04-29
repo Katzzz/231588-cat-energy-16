@@ -1,0 +1,113 @@
+.page-review {
+  background-color: @default-grey;
+
+  p {
+    padding-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.page-review__wrapper {
+  .container();
+}
+
+.page-review__title {
+  padding-top: 17px;
+  padding-bottom: 23px;
+}
+
+.page-review__stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-review__stats-item {
+  position: relative;
+  flex-basis: 122px;
+
+  margin-right: 32px;
+  margin-bottom: 35px;
+
+  border: 1px solid @underline-color-darken;
+  border-radius: 4%;
+
+  span {
+    display: inline-block;
+  }
+
+  span:first-child {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: inherit;
+    text-transform: uppercase;
+  }
+
+  span:last-child {
+    position: absolute;
+    width: 84px;
+    top: 46px;
+    left: 18px;
+
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    background-color: @default-grey;
+  }
+
+  &:first-child > span:first-child {
+    padding: 13px 15px 17px 43px;
+  }
+
+  &:nth-child(2) > span:first-child {
+    padding: 13px 15px 17px 22px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    padding-left: 48px;
+
+    p {
+      text-transform: uppercase;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .page-review {
+    background-color: #ffffff;
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .page-review__title {
+    padding-top: 50px;
+
+    font-size: 60px;
+  }
+}
+
+@media @desktop-widths {
+  // .page-review {
+  //   p {
+  //     background-color: @default-grey;
+  //   }
+  // }
+  .page-review__title {
+    padding-bottom: 80px;
+  }
+}
