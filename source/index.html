@@ -23,7 +23,7 @@
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button type="button" class="main-nav__hamburger-box">Меню</button>
           <ul class="main-nav__list-items">
-            <li><a class="main-nav__list-item">Главная</a></li>
+            <li><a class="main-nav__list-item" href="#">Главная</a></li>
             <li><a class="main-nav__list-item" href="catalog.html">Каталог продукции</a></li>
             <li><a class="main-nav__list-item" href="form.html">Подбор программы</a></li>
           </ul>
@@ -94,9 +94,21 @@
               <p>Затраты на питание: 15 000 РУБ.</p>
             </div>
           </div>
-          <div class="slider"></div>
+          <div class="page-review__slider slider">
+            <div class="slider__img">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img src="img/before-mobile@1x.png" alt="Fatty cat" width="320" height="240">
+              </picture>
+            </div>
+            <div class="slider__toggles">
+              <a class="slider__toggle slider__toggle--left slider__toggle--active" href="#">Было</a>
+              <a class="slider__toggle slider__toggle--right" href="#">Стало</a>
+            </div>
+          </div>
         </div>
-        </section>
+      </section>
 
       <section class="page-map">
         <div class="page-map__wrapper">
@@ -104,7 +116,7 @@
             <p class="page-map__text page-map__text--bold">Приглашаем к сотрудничеству дилеров!</p>
           </div>
           <div>
-            <p>ул.Большая Конюшенная, д.19/8</p>
+            <p class="page-map__text page-map__text--up">ул.Большая Конюшенная, д.19/8</p>
             <p class="page-map__text page-map__text--aside">Санкт-Петербург</p>
           </div>
         </div>
@@ -126,7 +138,7 @@
         <div class="page-footer__copyright">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <span>HTML Academy</span>
-            <img src="img/htmlacademy.svg" height="36" width="28" alt="HTML Academy">
+            <img src="img/htmlacademy.svg" height="34" width="27" alt="HTML Academy">
           </a>
         </div>
       </div>
