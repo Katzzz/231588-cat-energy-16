@@ -89,29 +89,30 @@
 
 @media @tablet-widths {
   .page-catalog__list-item {
-    padding-left: 55px;
-    padding-top: 80px;
+    margin-bottom: 32px;
+    padding-left: 51px;
+    padding-top: 75px;
     padding-bottom: 60px;
     padding-right: 60px;
 
     &--diet::before,
     &--fat::before {
-      left: 440px;
-      top: auto;
+      left: 444px;
+      top: 25%;
       width: 200px;
       height: 200px;
     }
 
     &--diet::after {
-      left: 478px;
-      top: 63px;
+      left: 476px;
+      top: 79px;
       height: 195px;
       width: 140px;
     }
 
     &--fat::after {
-      left: 385px;
-      top: 125px;
+      left: 412px;
+      top: 135px;
       width: 268px;
       height: 115px;
     }
@@ -127,21 +128,28 @@
 
   .page-catalog__title {
     padding-left: 0;
+    padding-bottom: 24px;
 
     font-size: 36px;
     line-height: 37.02px;
   }
 
   .page-catalog__text {
+    padding-bottom: 38px;
+
     font-size: 16px;
     line-height: 24px;
-
     border: none;
   }
 
   .page-catalog__btn {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      top: 16px;
+      left: 132px;
+    }
   }
 }
 
