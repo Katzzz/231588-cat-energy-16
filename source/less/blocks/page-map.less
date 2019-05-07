@@ -30,8 +30,8 @@
 @media @tablet-widths {
   .page-map__wrapper {
     justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 65px;
+    padding-bottom: 56px;
 
     div {
       flex-basis: 150px;
@@ -40,11 +40,28 @@
     & > div:nth-child(2) {
       text-align: right;
     }
+
+    div:last-child {
+      padding-right: 48px;
+    }
   }
 
   .page-map__text {
+    font-size: 16px;
+
     &--aside {
       padding-top: 20px;
+    }
+
+    &--bold {
+      padding-left: 35px;
+
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &--up {
+      width: 150px;
     }
   }
 }
