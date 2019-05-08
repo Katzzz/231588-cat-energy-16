@@ -124,11 +124,6 @@
     & li:last-child > a {
       margin-right: 0;
     }
-
-    a {
-      font-size: 18px;
-      line-height: 24.86px;
-    }
   }
 
   .main-nav__list-item {
@@ -140,11 +135,24 @@
 
     border-bottom: none;
 
+    font-size: 18px;
+    line-height: 24.86px;
+
     &--active {
       border-bottom: 2px solid @base-color;
     }
-
-
   }
 }
 
+@media @desktop-widths {
+  .main-nav__list-item {
+    padding-top: 32px;
+
+    font-size: 20px;
+    color: #ffffff;
+
+    &--active {
+      border-color: #ffffff;
+    }
+  }
+}
