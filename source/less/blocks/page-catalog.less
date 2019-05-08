@@ -156,20 +156,49 @@
 @media @desktop-widths {
   .page-catalog__list {
     display: flex;
+    justify-content: space-between;
   }
 
   .page-catalog__list-item {
     flex-basis: 570px;
+
+    p {
+      max-width: 100%;
+    }
 
     &--diet {
       margin-right: 80px;
     }
 
     &--diet::before,
-    &--fat::before,
-    &--diet::after,
-    &--fat::after {
-      left: 0;
+    &--fat::before {
+      width: 100px;
+      height: 100px;
+      left: 52px;
+      top: 47px;
     }
+
+    &--diet::after {
+      width: 70px;
+      height: 98px;
+      top: 41px;
+      left: 65px;
+    }
+
+    &--fat::after {
+      width: 134px;
+      height: 57px;
+      top: 69px;
+      left: 33px;
+    }
+  }
+
+  .page-catalog__title {
+    padding-left: 162px;
+    padding-bottom: 75px;
+  }
+
+  .page-catalog__text {
+    padding-bottom: 12px;
   }
 }

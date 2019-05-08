@@ -165,9 +165,17 @@
     border: none;
   }
 
+  .page-features__title {
+    padding-top: 42px;
+  }
+
   .page-features__list-item {
     flex-basis: 245px;
     margin-right: 80px;
+
+    &:nth-child(2n) {
+      flex-basis: 245px;
+    }
 
     &:last-child {
       margin-right: 0;

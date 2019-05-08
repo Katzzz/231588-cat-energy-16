@@ -1,7 +1,3 @@
-.page-header__wrapper {
-  .container();
-}
-
 .page-header__top {
   position: relative;
   padding-top: 10px;
@@ -21,6 +17,7 @@
 }
 
 .page-header__bottom {
+  .container();
   position: relative;
   min-height: 502px;
 
@@ -39,7 +36,6 @@
 }
 
 .page-header__promo {
-  .container();
   min-height: 305px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -160,15 +156,25 @@
   }
 
   .page-header__title {
-    padding-top: 115px;
+    padding-top: 110px;
+    padding-left: 80px;
+  }
+
+  .page-header__text {
+    padding-left: 80px;
+    padding-bottom: 52px;
+  }
+
+  .page-header__btn {
+    margin-left: 78px;
   }
 
   .page-header__bottom {
     &::before {
       width: 552px;
       height: 499px;
-      top: 210px;
-      right: 25px;
+      top: 29px;
+      left: 491px;
 
       background-image: url("../img/index-can-desktop@1x.png");
     }
@@ -176,7 +182,7 @@
     &::after {
       content: "";
       position: absolute;
-      width: 652px;
+      width: 653px;
       height: 696px;
       right: 0;
       top: -113px;
@@ -187,5 +193,9 @@
       background-position: center 20%;
       background-repeat: no-repeat;
     }
+  }
+
+  .page-header__promo {
+    min-height: 642px;
   }
 }
