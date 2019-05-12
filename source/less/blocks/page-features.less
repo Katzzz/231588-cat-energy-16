@@ -175,10 +175,31 @@
 
     &:nth-child(2n) {
       flex-basis: 245px;
+      padding-left: 0;
     }
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .page-features__list-item:nth-child(1)::after {
+    content: "1";
+    right: 17px;
+  }
+
+  .page-features__list-item:nth-child(2)::after {
+    content: "2";
+    right: 1px;
+  }
+
+  .page-features__list-item:nth-child(3)::after {
+    content: "3";
+    right: 0;
+  }
+
+  .page-features__list-item:nth-child(4)::after {
+    content: "4";
+    right: 0;
   }
 }
