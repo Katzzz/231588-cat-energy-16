@@ -7,7 +7,7 @@
 .page-map__wrapper {
   .container();
   display: flex;
-  padding-top: 32px;
+  padding-top: 29px;
   padding-bottom: 25px;
 
 }
@@ -21,6 +21,8 @@
   }
 
   &--bold {
+    padding-right: 24px;
+
     font-size: 16px;
     font-family: "Oswald", "Arial", sans-serif;
     text-transform: uppercase;
@@ -74,10 +76,10 @@
   .page-map__wrapper {
     position: absolute;
     width: 405px;
-    padding-left: 75px;
-    padding-right: 85px;
+    padding-left: 41px;
+    padding-right: 105px;
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 56px;
     top: 95px;
     left: 110px;
     z-index: 99;
@@ -90,6 +92,12 @@
 
     & > div:nth-child(2) {
       text-align: left;
+    }
+  }
+
+  .page-map__text {
+    &--bold {
+      padding-right: 111px;
     }
   }
 }

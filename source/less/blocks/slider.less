@@ -136,11 +136,23 @@
   }
 
   .slider__img {
-    top: -189px;
-    left: -94px;
+    top: -191px;
+    left: 39px;
+  }
+
+  .slider__toggles {
+    &::after,
+    &::before {
+      top: 372px;
+    }
   }
 
   .slider__toggle {
     flex-basis: 325px;
+    padding-top: 365px;
+
+    &--right {
+      padding-right: 112px;
+    }
   }
 }

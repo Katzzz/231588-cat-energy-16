@@ -1,11 +1,23 @@
 .add-catalog__title {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 34px;
 
   font-size: 24px;
   line-height: 24px;
 
   border-bottom: 1px solid @underline-color-darken;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 41px;
+    right: -20px;
+    width: 53px;
+    height: 3px;
+
+    background-color: @base-color;
+  }
 }
 
 .add-catalog__item {
@@ -13,8 +25,9 @@
 }
 
 .add-catalog__item-title {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 2px;
 
   font-size: 16px;
   line-height: 16px;
@@ -38,8 +51,11 @@
 
 .add-catalog__btn {
   width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media @tablet-widths {

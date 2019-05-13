@@ -205,11 +205,11 @@
   }
 
   .page-review__data {
-    flex-basis: 45%;
+    flex-basis: 36%;
   }
 
   .page-review__slider {
-    flex-basis: 45%;
+    flex-basis: 54%;
   }
 
   .page-review__stats {
@@ -220,20 +220,26 @@
     &:last-child {
       padding-left: 0;
     }
+
+    & span:last-child {
+      background-color: @default-grey;
+    }
   }
 
   .page-review__stats-data {
+    flex-basis: 440px;
     padding-top: 24px;
     padding-left: 0;
 
     p {
+      width: 190px;
       display: inline-block;
       padding: 0;
 
       text-align: left;
 
       &:first-child {
-        padding-right: 60px;
+        padding-right: 44px;
       }
     }
   }
