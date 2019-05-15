@@ -26,9 +26,9 @@
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button type="button" class="main-nav__hamburger-box">Меню</button>
           <ul class="main-nav__list-items">
-            <li><a class="main-nav__list-item" href="index.html">Главная</a></li>
-            <li><a class="main-nav__list-item" href="catalog.html">Каталог продукции</a></li>
-            <li><a class="main-nav__list-item main-nav__list-item--active" href="#">Подбор программы</a></li>
+            <li><a class="main-nav__list-item main-nav__list-item--reverse" href="index.html">Главная</a></li>
+            <li><a class="main-nav__list-item main-nav__list-item--reverse" href="catalog.html">Каталог продукции</a></li>
+            <li><a class="main-nav__list-item  main-nav__list-item--reverse main-nav__list-item--active" href="#">Подбор программы</a></li>
           </ul>
         </nav>
       </div>
@@ -45,9 +45,10 @@
       <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
         <div class="form__profile">
+
           <fieldset class="form__profile-item">
             <legend class="visually-hidden">Анкета</legend>
-            <ul class="form__list">
+            <ul class="form__profile-list">
                 <li class="form__list-item">
                   <label for="name">Имя:*</label>
                   <input type="text" id="name" name="name" placeholder="Барсик" required>
@@ -65,7 +66,7 @@
 
           <fieldset class="form__profile-item form__profile-item--underlined">
             <legend class="visually-hidden">Причина</legend>
-            <ul class="form__list">
+            <ul class="form__profile-list">
               <li class="form__list-item form__list-item--radio">
                 <input type="radio" id="diet" name="reasons" checked>
                 <label for="diet">Похудение</label>
@@ -88,10 +89,12 @@
           <li class="form__list-item">
             <label for="email">Email:*</label>
             <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="form__icon form__icon--mail" width="16" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
           </li>
           <li class="form__list-item">
             <label for="phone">Телефон:*</label>
             <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+            <svg class="form__icon form__icon--phone" width="20" height="23"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
           </li>
           </ul>
         </fieldset>
