@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Cat Energy</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="picturefill.min.js"></script>
   </head>
 
 
@@ -18,16 +19,16 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" alt="Cat energy" width="193" height="38">
+                <img src="img/logo-mobile.svg" alt="Cat energy">
               </picture>
             </a>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button type="button" class="main-nav__hamburger-box">Меню</button>
           <ul class="main-nav__list-items">
-            <li><a class="main-nav__list-item" href="index.html">Главная</a></li>
-            <li><a class="main-nav__list-item" href="catalog.html">Каталог продукции</a></li>
-            <li><a class="main-nav__list-item">Подбор программы</a></li>
+            <li><a class="main-nav__list-item main-nav__list-item--reverse" href="index.html">Главная</a></li>
+            <li><a class="main-nav__list-item main-nav__list-item--reverse" href="catalog.html">Каталог продукции</a></li>
+            <li><a class="main-nav__list-item  main-nav__list-item--reverse main-nav__list-item--active" href="#">Подбор программы</a></li>
           </ul>
         </nav>
       </div>
@@ -44,9 +45,10 @@
       <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
         <div class="form__profile">
+
           <fieldset class="form__profile-item">
             <legend class="visually-hidden">Анкета</legend>
-            <ul class="form__list">
+            <ul class="form__profile-list">
                 <li class="form__list-item">
                   <label for="name">Имя:*</label>
                   <input type="text" id="name" name="name" placeholder="Барсик" required>
@@ -64,7 +66,7 @@
 
           <fieldset class="form__profile-item form__profile-item--underlined">
             <legend class="visually-hidden">Причина</legend>
-            <ul class="form__list">
+            <ul class="form__profile-list">
               <li class="form__list-item form__list-item--radio">
                 <input type="radio" id="diet" name="reasons" checked>
                 <label for="diet">Похудение</label>
@@ -87,10 +89,12 @@
           <li class="form__list-item">
             <label for="email">Email:*</label>
             <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="form__icon form__icon--mail" width="16" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
           </li>
           <li class="form__list-item">
             <label for="phone">Телефон:*</label>
             <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+            <svg class="form__icon form__icon--phone" width="20" height="23"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
           </li>
           </ul>
         </fieldset>
@@ -131,10 +135,15 @@
 
       <section class="page-map page-map--colored">
         <div class="page-map__wrapper">
-          <p class="page-map__text page-map__text--bold">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-map__text">ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+          <div>
+            <p class="page-map__text page-map__text--bold">Приглашаем к сотрудничеству дилеров!</p>
+          </div>
+          <div>
+            <p class="page-map__text page-map__text--up">ул.Большая Конюшенная, д.19/8</p>
+            <p class="page-map__text page-map__text--aside">Санкт-Петербург</p>
+          </div>
         </div>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e0746d656fa574c6a98136c533c2cbc1be9a3223696308095e6e4b7dbdcdd09&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e0746d656fa574c6a98136c533c2cbc1be9a3223696308095e6e4b7dbdcdd09&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
 
     </main>
@@ -145,13 +154,24 @@
           <img src="img/logo-footer.svg" alt="Cat energy" width="128" height="24">
         </div>
         <div class="page-footer__social">
-          <a href="#" class="social-link social-link--vkontakte"><span>Мы в Вконтакте</span></a>
-          <a href="#" class="social-link social-link--instagram"><span>Мы в Инстаграм</span></a>
-          <a href="#" class="social-link social-link--facebook"><span>Мы в Фейсбук</span></a>
+          <a href="#" class="social-link">
+            <span>Мы в Вконтакте</span>
+            <svg class="social-link__icon social-link__icon--vk" width="23" height="12"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+          </a>
+          <a href="#" class="social-link social-link--instagram">
+            <span>Мы в Инстаграм</span>
+            <svg class="social-link__icon social-link__icon--insta" width="16" height="17"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+          </a>
+          <a href="#" class="social-link social-link--facebook">
+            <span>Мы в Фейсбук</span>
+            <svg class="social-link__icon social-link__icon--facebook" width="11" height="20"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+          </a>
         </div>
         <div class="page-footer__copyright">
           <span>HTML Academy</span>
-          <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" height="36" width="28" alt="HTML Academy"></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="page-footer__icon" width="34" height="45"><use xlink:href="img/sprite.svg#html-icon"></use></svg>
+          </a>
         </div>
       </div>
     </footer>

@@ -8,12 +8,66 @@
 }
 
 .page-features__title {
-  margin-bottom: 42px;
+  margin-bottom: 27px;
 }
 
 .page-features__list-item {
   padding-left: 80px;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
+
+  p {
+    position: relative;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -2px;
+      left: -80px;
+
+      background-color: @base-color;
+    }
+  }
+
+  &:nth-child(1) > p::after {
+    content: url("../../img/advantage-leaf@1x.png");
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    left: -74px;
+  }
+
+  &:nth-child(2) > p::after {
+    content: url("../../img/advantage-powder@1x.png");
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    left: -74px;
+  }
+
+  &:nth-child(3) > p::after {
+    content: url("../../img/advantage-dining@1x.png");
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    left: -74px;
+  }
+
+  &:nth-child(4) > p::after {
+    content: url("../../img/advantage-clock@1x.png");
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    left: -74px;
+  }
 }
 
 @media @tablet-widths {
@@ -22,56 +76,87 @@
   }
 
   .page-features__title {
+    padding-top: 14px;
+
     font-size: 60px;
   }
 
   .page-features__list {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 13px;
   }
 
   .page-features__list-item {
+    flex-basis: 354px;
     position: relative;
-    flex-basis: 50%;
     padding-left: 0;
     padding-top: 115px;
-    padding-bottom: 103px;
+    padding-bottom: 90px;
+
+    &:nth-child(2n) {
+      flex-basis: 324px;
+      padding-left: 28px;
+    }
 
     p {
       width: 230px;
+      padding-top: 41px;
+
       font-size: 16px;
       line-height: 24px;
 
-      &::after {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        height: 230px;
-
-        font-size: 281.07px;
-        line-height: 281.07px;
-        font-family: inherit;
-        color: @default-grey;
-
-        z-index: -99;
+      &::before {
+        width: 80px;
+        height: 80px;
+        left: 0;
+        top: -70px;
       }
+    }
+
+    &::after {
+      position: absolute;
+      top: 5px;
+      height: 230px;
+
+      font-size: 281.07px;
+      line-height: 281.07px;
+      font-family: inherit;
+      color: @default-grey;
+
+      z-index: -99;
+    }
+
+    &:nth-child(1) > p::after,
+    &:nth-child(2) > p::after,
+    &:nth-child(3) > p::after,
+    &:nth-child(4) > p::after {
+      width: 80px;
+      height: 80px;
+      left: 15px;
+      top: -54px;
     }
   }
 
-  .page-features__list-item:nth-child(1) > p::after {
+
+  .page-features__list-item:nth-child(1)::after {
     content: "1";
+    right: 125px;
   }
 
-  .page-features__list-item:nth-child(2) > p::after {
+  .page-features__list-item:nth-child(2)::after {
     content: "2";
+    right: 78px;
   }
 
-  .page-features__list-item:nth-child(3) > p::after {
+  .page-features__list-item:nth-child(3)::after {
     content: "3";
+    right: 107px;
   }
 
-  .page-features__list-item:nth-child(4) > p::after {
+  .page-features__list-item:nth-child(4)::after {
     content: "4";
+    right: 75px;
   }
 }
 
@@ -80,12 +165,41 @@
     border: none;
   }
 
+  .page-features__title {
+    padding-top: 42px;
+  }
+
   .page-features__list-item {
     flex-basis: 245px;
     margin-right: 80px;
 
+    &:nth-child(2n) {
+      flex-basis: 245px;
+      padding-left: 0;
+    }
+
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .page-features__list-item:nth-child(1)::after {
+    content: "1";
+    right: 17px;
+  }
+
+  .page-features__list-item:nth-child(2)::after {
+    content: "2";
+    right: 1px;
+  }
+
+  .page-features__list-item:nth-child(3)::after {
+    content: "3";
+    right: 0;
+  }
+
+  .page-features__list-item:nth-child(4)::after {
+    content: "4";
+    right: 0;
   }
 }

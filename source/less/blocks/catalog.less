@@ -1,7 +1,7 @@
 .catalog__title {
   .container();
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 27px;
+  padding-bottom: 40px;
 
   border-bottom: 1px solid @default-grey;
 }
@@ -34,11 +34,18 @@
   background-position: center;
 }
 
+.catalog__promo-icon {
+  padding-top: 64px;
+  padding-left: 113px;
+
+  fill: #ffffff;
+}
+
 .catalog__promo-text {
-  width: 160px;
-  padding-top: 190px;
-  padding-left: 60px;
-  padding-bottom: 39px;
+  width: 159px;
+  padding-top: 58px;
+  padding-left: 67px;
+  padding-bottom: 42px;
 
   font-size: 16px;
   line-height: 20px;
@@ -48,7 +55,7 @@
 
 @media @tablet-widths {
   .catalog__title {
-    padding-top: 65px;
+    padding-top: 55px;
     padding-bottom: 80px;
     border: none;
     font-size: 60px;
@@ -67,16 +74,24 @@
 
   .catalog__promo-text {
     position: absolute;
-    top: 75px;
-    right: 125px;
+    top: 70px;
+    right: 119px;
     width: 165px;
     padding: 0;
 
     text-align: left;
   }
+
+  .catalog__promo-icon {
+    padding-left: 90px;
+  }
 }
 
 @media @desktop-widths {
+  .catalog__title {
+    padding-top: 76px;
+  }
+
   .catalog__promo {
     padding: 0;
     margin: 0;
@@ -84,12 +99,13 @@
 
   .catalog__promo-img {
     width: 245px;
-    height: 275px;
+    height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
   }
 
   .catalog__promo-text {
-    top: 165px;
+    width: 146px;
+    top: 187px;
     right: 42px;
 
     text-align: center;

@@ -1,0 +1,158 @@
+.slider {
+  margin-top: 10px;
+}
+
+.slider__img {
+  width: 300px;
+  height: 240px;
+  margin-left: -20px;
+}
+
+.slider__toggles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 34px;
+  padding-bottom: 33px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+
+    border-radius: 10px;
+  }
+
+  &::after {
+    top: 36px;
+    left: 100px;
+    width: 84px;
+    height: 12px;
+
+    border: 1px solid @underline-color-darken;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    width: 34px;
+    height: 6px;
+    top: 40px;
+    left: 108px;
+
+    background-color: @base-color;
+    z-index: 99;
+  }
+}
+
+.slider__toggle {
+  flex-basis: 140px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  &--left {
+    padding-left: 45px;
+  }
+
+  &--right {
+    padding-left: 80px;
+  }
+}
+
+@media @tablet-widths {
+  .slider {
+    position: relative;
+    margin-top: 220px;
+  }
+
+  .slider__img {
+    position: absolute;
+    width: 690px;
+    height: 517px;
+    top: -169px;
+    left: 65px;
+    z-index: 99;
+  }
+
+  .slider__toggles {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::after {
+      left: 168px;
+      top: 374px;
+      height: 7px;
+      width: 427px;
+
+      border: none;
+      background-color: @slider-color-dark;
+    }
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      top: 374px;
+      left: 379px;
+
+      border-radius: 50%;
+      box-shadow: 0 0 0 12px #ffffff,
+                  0 0 0 13px @darken-grey;
+    }
+  }
+
+  .slider__toggle {
+    flex-basis: 50%;
+    padding-right: 101px;
+    padding-left: 97px;
+    padding-top: 367px;
+    padding-bottom: 74px;
+
+    vertical-align: bottom;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted @default-grey;
+
+    &--right {
+      padding-right: 101px;
+
+      text-align: right;
+      background-color: @slider-color-light;
+    }
+
+    &--left {
+      padding-left: 98px;
+
+      background-color: @default-grey;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .slider {
+    margin-top: 0;
+  }
+
+  .slider__img {
+    top: -191px;
+    left: 39px;
+  }
+
+  .slider__toggles {
+    &::after,
+    &::before {
+      top: 372px;
+    }
+  }
+
+  .slider__toggle {
+    flex-basis: 325px;
+    padding-top: 365px;
+
+    &--right {
+      padding-right: 42px;
+    }
+  }
+}

@@ -1,22 +1,29 @@
 .page-map {
- &--colored {
-   background-color: @default-grey;
- }
+  &--colored {
+    background-color: @default-grey;
+  }
 }
 
 .page-map__wrapper {
   .container();
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 29px;
+  padding-bottom: 25px;
+
 }
 
 .page-map__text {
-  flex-basis: 50%;
+  font-size: 14px;
+  line-height: 20px;
+
+  &--up {
+    width: 138px;
+  }
 
   &--bold {
+    padding-right: 24px;
+
     font-size: 16px;
-    line-height: 20px;
     font-family: "Oswald", "Arial", sans-serif;
     text-transform: uppercase;
   }
@@ -25,8 +32,8 @@
 @media @tablet-widths {
   .page-map__wrapper {
     justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 65px;
+    padding-bottom: 56px;
 
     div {
       flex-basis: 150px;
@@ -35,11 +42,28 @@
     & > div:nth-child(2) {
       text-align: right;
     }
+
+    div:last-child {
+      padding-right: 48px;
+    }
   }
 
   .page-map__text {
+    font-size: 16px;
+
     &--aside {
       padding-top: 20px;
+    }
+
+    &--bold {
+      padding-left: 35px;
+
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &--up {
+      width: 150px;
     }
   }
 }
@@ -52,10 +76,10 @@
   .page-map__wrapper {
     position: absolute;
     width: 405px;
-    padding-left: 75px;
-    padding-right: 85px;
+    padding-left: 41px;
+    padding-right: 105px;
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 56px;
     top: 95px;
     left: 110px;
     z-index: 99;
@@ -68,6 +92,12 @@
 
     & > div:nth-child(2) {
       text-align: left;
+    }
+  }
+
+  .page-map__text {
+    &--bold {
+      padding-right: 111px;
     }
   }
 }
