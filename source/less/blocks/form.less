@@ -20,7 +20,7 @@
 }
 
 .form__profile-item {
-  border-bottom: 1px solid @default-grey;
+  border-bottom: 1px solid @base-color-reverse;
 }
 
 .form__item {
@@ -38,6 +38,18 @@
     resize: unset;
     border: 1px solid @input-border-color;
     .placeholder();
+
+    &:hover {
+      border: 1px solid @input-border-color-hover;
+    }
+
+    &:active {
+      border: 1px solid @input-border-color-active;
+    }
+
+    &:required {
+      border: 1px solid @input-border-color-invalid;
+    }
   }
 
   &--underlined {
@@ -105,6 +117,7 @@
   display: flex;
   flex-basis: 50%;
   align-items: center;
+  position: relative;
 
   padding-bottom: 8px;
 
@@ -113,6 +126,10 @@
 
   label {
     padding-right: 15px;
+
+    &:active {
+      color: @font-color-active;
+    }
   }
 
   input[type="text"],
@@ -126,6 +143,18 @@
     border: 1px solid @input-border-color;
     text-transform: uppercase;
     color: @light-font-color;
+
+    &:hover {
+      border: 1px solid @input-border-color-hover;
+    }
+
+    &:active {
+      border: 2px solid @input-border-color-active;
+    }
+
+    &:required {
+      border: 2px solid @input-border-color-invalid;
+    }
   }
 
   &--radio,
@@ -149,9 +178,10 @@
   height: 30px;
   top: -5px;
   left: 0;
-  border: 1px solid @input-border-color;
+  border: 1px solid @form-btn-color;
   border-radius: 50%;
 }
+
 
 .form__list-item input[type="radio"]:checked + label::after {
   content: "";
@@ -161,7 +191,7 @@
   top: 5px;
   left: 11px;
   border-radius: 50%;
-  background-color: @default-green;
+  background-color: @base-color;
 }
 
 .form__list-item input[type="checkbox"] + label::before {
@@ -172,7 +202,11 @@
   top: 2px;
   left: 0;
 
-  border: 1px solid @input-border-color;
+  border: 1px solid @form-btn-color;
+
+  &:hover {
+    border: 1px solid @form-btn-color-hover;
+  }
 }
 
 .form__list-item input[type="checkbox"]:checked + label::after {
@@ -183,6 +217,22 @@
   top: 9px;
   left: 5px;
 }
+
+.form__list-item:hover input[type="radio"] + label::before,
+.form__list-item:hover input[type="checkbox"] + label::before {
+  border: 1px solid @form-btn-color-hover;
+}
+
+.form__list-item:active input[type="radio"] + label::before,
+.form__list-item:active input[type="checkbox"] + label::before {
+  border: 1px solid @form-btn-color-active;
+}
+
+.form__list-item:active input[type="radio"] + label::after,
+.form__list-item:active input[type="checkbox"] + label::after {
+  opacity: 0.3;;
+}
+
 
 .form__wrapper {
   .container();
@@ -200,6 +250,28 @@
   text-align: center;
   color: @light-font-color;
   line-height: 16px;
+}
+
+.form__icon {
+  position: absolute;
+
+  &--mail {
+    top: 20px;
+    right: 15px;
+  }
+
+  &--phone {
+    top: 15px;
+    right: 11px;
+  }
+}
+
+.form__list-item:active .form__icon {
+  fill: @base-color;
+}
+
+.form__list-item:required .form__icon {
+  fill: @error-color;
 }
 
 @media @tablet-widths {
@@ -313,7 +385,6 @@
   }
 
   .form__list-item {
-    position: relative;
     padding-bottom: 17px;
 
     font-size: 20px;
@@ -326,8 +397,6 @@
   }
 
   .form__icon {
-    position: absolute;
-
     &--mail {
       top: 23px;
       right: 20px;
@@ -376,9 +445,12 @@
   .form__profile {
     display: flex;
     flex-wrap: wrap;
+    width: 1300px;
+    margin: 0 auto;
 
     fieldset {
       flex-basis: 530px;
+      margin: 0;
 
       &:first-child {
         padding-right: 80px;
@@ -388,7 +460,6 @@
 
   .form__profile-list {
     width: 570px;
-    padding-left: 112px;
     padding-right: 0;
   }
 

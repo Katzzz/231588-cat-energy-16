@@ -10,10 +10,14 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: @default-green;
+  background-color: @btn-color;
 
   &:hover {
     color: #ffffff;
-    background-color: @darken-green;
+    background-color: @btn-hover-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
