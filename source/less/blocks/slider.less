@@ -99,7 +99,20 @@
 
       border-radius: 50%;
       box-shadow: 0 0 0 12px #ffffff,
-                  0 0 0 13px @darken-grey;
+                  0 0 0 13px @base-color-reverse-darken;
+
+      &:hover {
+        box-shadow: 0 0 0 12px #ffffff,
+                    0 0 0 13px @base-color-reverse-darken,
+                    0 15px 2px @base-color-reverse-darken;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 12px @base-color,
+                    0 0 0 13px @base-color-reverse-darken,
+                    0 15px 2px @base-color-reverse-darken;
+      }
+
     }
   }
 
@@ -113,7 +126,10 @@
     vertical-align: bottom;
     font-size: 20px;
     line-height: 20px;
-    border-bottom: 1px dotted @default-grey;
+
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: @default-font-color;
 
     &--right {
       padding-right: 101px;
@@ -125,7 +141,16 @@
     &--left {
       padding-left: 98px;
 
-      background-color: @default-grey;
+      background-color: @base-color-reverse;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: @default-font-color;
+    }
+
+    &:active {
+      text-decoration: none;
     }
   }
 }
@@ -137,7 +162,7 @@
 
   .slider__img {
     top: -191px;
-    left: 39px;
+    left: 30px;
   }
 
   .slider__toggles {

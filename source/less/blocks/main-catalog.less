@@ -2,7 +2,7 @@
   &--uppercase {
     padding-bottom: 8px;
     text-transform: uppercase;
-    font-family: "Oswald", "Arial", sans-serif;
+    font-family: inherit;
     font-size: 16px;
     line-height: 20px;
   }
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   padding-bottom: 24px;
 
-  border-bottom: 1px solid @default-grey;
+  border-bottom: 1px solid @underline-color;
 
   &--show-all {
     position: relative;
@@ -55,8 +55,17 @@
     margin-top: 22px;
 
 
-    background-color: @default-grey;
+    background-color: @btn-color-reverse;
     color: @light-font-color;
+
+    &:hover {
+      background-color: @btn-color-reverse-darken;
+      color: @light-font-color;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 
@@ -112,7 +121,7 @@
     margin-top: 87px;
     padding-top: 142px;
 
-    background: @default-grey;
+    background: @base-color-reverse;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -123,7 +132,7 @@
       padding-top: 57px;
 
       background-color: #ffffff;
-      border: 1px solid @default-grey;
+      border: 1px solid  @underline-color;
     }
   }
 
@@ -234,14 +243,14 @@
       padding-top: 7px;
       padding-bottom: 8px;
 
-      border-bottom: 1px solid @darken-grey;
+      border-bottom: 1px solid @underline-color;
     }
 
     &--quantity {
       padding-top: 7px;
       padding-bottom: 8px;
 
-      border-bottom: 1px solid @darken-grey;
+      border-bottom: 1px solid @underline-color;
     }
   }
 

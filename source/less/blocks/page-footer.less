@@ -15,6 +15,18 @@
   padding-bottom: 28px;
 }
 
+.page-footer__logo-icon {
+  color: @lighten-font-color;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__social {
   display: flex;
   justify-content: center;
@@ -47,10 +59,22 @@
 
   font-size: 16px;
   line-height: 16px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__icon {
   fill: @darken-icon-color;
+
+  &:hover {
+    fill: @base-color;
+  }
+
+  &:active {
+    fill: @base-color;
+  }
 }
 
 @media @tablet-widths {
