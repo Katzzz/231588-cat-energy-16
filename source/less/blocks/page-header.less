@@ -4,18 +4,21 @@
   position: relative;
   padding-top: 10px;
 
-  border-bottom: 1px solid @default-grey;
+  border-bottom: 1px solid @underline-color;
 }
 
 .page-header__logo {
-  width: 193px;
-  height: 38px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 13px;
 
   vertical-align: middle;
   text-align: left;
+
+  img {
+    width: 193px;
+    height: 38px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -46,6 +49,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-mobile@2x.png");
+      background-size: 280px;
     }
   }
 }
@@ -58,6 +62,7 @@
   background-color: @base-color;
   background-position: center 20%;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -103,11 +108,14 @@
   }
 
   .page-header__logo {
-    width: 173px;
-    height: 58px;
     margin-right: 94px;
     padding: 0;
     padding-top: 11px;
+
+    img {
+      width: 173px;
+      height: 58px;
+    }
   }
 
   .page-header__bottom {
@@ -123,6 +131,7 @@
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/index-can-tablet@2x.jpg");
+        background-size: 706px;
       }
     }
   }
@@ -177,8 +186,10 @@
   }
 
   .page-header__logo {
-    width: 204px;
-    height: 59px;
+    img {
+      width: 204px;
+      height: 59px;
+    }
   }
 
   .page-header__title {
@@ -207,7 +218,8 @@
       background-image: url("../img/index-can-desktop@1x.png");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-can-desktop@2x.jpg");
+        background-image: url("../img/index-can-desktop@2x.png");
+        background-size: 552px;
       }
     }
 
@@ -227,6 +239,7 @@
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: cover;
       }
     }
   }
