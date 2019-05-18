@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Cat Energy</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link href="css/style.min.css" rel="stylesheet">
     <script src="picturefill.min.js"></script>
   </head>
 
@@ -18,7 +22,7 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Cat energy">
+            <img src="img/logo-mobile.svg" width="193" height="38" alt="Cat energy">
           </picture>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -106,11 +110,11 @@
               <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x" alt="Fatty cat">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
                 <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Fatty cat">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Fatty cat">
               </picture>
             </div>
             <div class="slider__toggles">
@@ -131,6 +135,17 @@
             <p class="page-map__text page-map__text--aside">Санкт-Петербург</p>
           </div>
         </div>
+        <div class="page-map__img page-map__img--nojs">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Map image">
+        </picture>
+        </div>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e0746d656fa574c6a98136c533c2cbc1be9a3223696308095e6e4b7dbdcdd09&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
 
@@ -139,7 +154,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <svg class="page-footer__logo-icon" width="128" height="24"><use xlink:href="img/sprite.svg#icon-logo-footer"></use></svg>
+            <img class="page-footer__logo-icon" src="img/logo-footer.svg" width="130" height="24" alt="Cat energy">
         </div>
         <div class="page-footer__social">
           <a href="#" class="social-link">
@@ -152,19 +167,20 @@
           </a>
           <a href="#" class="social-link social-link--facebook">
             <span>Мы в Фейсбук</span>
-            <svg class="social-link__icon social-link__icon--facebook" width="11" height="20"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+            <svg class="social-link__icon social-link__icon--facebook" width="11" height="20"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
           </a>
         </div>
         <div class="page-footer__copyright">
           <span>HTML Academy</span>
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="page-footer__icon" width="34" height="45"><use xlink:href="img/sprite.svg#html-icon"></use></svg>
+            <svg class="page-footer__icon" width="34" height="45"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
           </a>
         </div>
       </div>
     </footer>
 
     <script type="text/javascript" src="./js/hamburger-box.js"></script>
+    <script type="text/javascript" src="./js/page-map.js"></script>
 
   </body>
 

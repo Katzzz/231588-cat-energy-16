@@ -11,6 +11,19 @@
   padding-bottom: 25px;
 }
 
+.page-map__img {
+  display: none;
+
+  img {
+    width: 100%;
+    height: 400px;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
 .page-map__text {
   font-size: 14px;
   line-height: 20px;
@@ -28,6 +41,7 @@
   }
 }
 
+
 @media @tablet-widths {
   .page-map__wrapper {
     justify-content: space-between;
@@ -44,6 +58,13 @@
 
     div:last-child {
       padding-right: 48px;
+    }
+  }
+
+  .page-map__img {
+    img {
+      width: 100%;
+      height: 400px;
     }
   }
 
@@ -74,11 +95,11 @@
 
   .page-map__wrapper {
     position: absolute;
-    width: 405px;
+    width: 400px;
     padding-left: 41px;
     padding-right: 105px;
-    padding-top: 65px;
-    padding-bottom: 56px;
+    padding-top: 66px;
+    padding-bottom: 57px;
     top: 95px;
     left: 40px;
     z-index: 99;
@@ -91,6 +112,13 @@
 
     & > div:nth-child(2) {
       text-align: left;
+    }
+  }
+
+  .page-map__img {
+    img {
+      width: 100%;
+      height: 400px;
     }
   }
 
