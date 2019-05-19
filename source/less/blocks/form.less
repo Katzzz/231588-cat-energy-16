@@ -37,18 +37,17 @@
 
     resize: unset;
     border: 1px solid @input-border-color;
+    outline: none;
+
     .placeholder();
 
     &:hover {
       border: 1px solid @input-border-color-hover;
     }
 
-    &:active {
-      border: 1px solid @input-border-color-active;
-    }
-
-    &:required {
-      border: 1px solid @input-border-color-invalid;
+    &:focus {
+      padding: 14px;
+      border: 2px solid @input-border-color-active;
     }
   }
 
@@ -132,28 +131,26 @@
     }
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
+  input {
     flex-grow: 1;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
+    box-sizing: border-box;
 
     border: 1px solid @input-border-color;
     text-transform: uppercase;
     color: @light-font-color;
+    outline: none;
 
     &:hover {
       border: 1px solid @input-border-color-hover;
     }
 
-    &:active {
+    &:focus {
+      padding-top: 14px;
+      padding-bottom: 14px;
       border: 2px solid @input-border-color-active;
-    }
-
-    &:required {
-      border: 2px solid @input-border-color-invalid;
     }
   }
 
@@ -223,14 +220,14 @@
   border: 1px solid @form-btn-color-hover;
 }
 
-.form__list-item:active input[type="radio"] + label::before,
-.form__list-item:active input[type="checkbox"] + label::before {
+.form__list-item:focus input[type="radio"] + label::before,
+.form__list-item:focus input[type="checkbox"] + label::before {
   border: 1px solid @form-btn-color-active;
 }
 
-.form__list-item:active input[type="radio"] + label::after,
-.form__list-item:active input[type="checkbox"] + label::after {
-  opacity: 0.3;;
+.form__list-item:focus input[type="radio"] + label::after,
+.form__list-item:focus input[type="checkbox"] + label::after {
+  opacity: 0.3;
 }
 
 
@@ -266,13 +263,21 @@
   }
 }
 
-.form__list-item:active .form__icon {
+.form__list-item input:focus ~ .form__icon {
   fill: @base-color;
 }
 
-.form__list-item:required .form__icon {
-  fill: @error-color;
+.form__input {
+  &--required:invalid {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: 2px solid @input-border-color-invalid;
+  }
 }
+
+// .form__list-item input:invalid ~ .form__icon {
+//   fill: @error-color;
+// }
 
 @media @tablet-widths {
   .form__title {
