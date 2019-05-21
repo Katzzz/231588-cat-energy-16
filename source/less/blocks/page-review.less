@@ -179,10 +179,17 @@
       text-align: right;
     }
   }
+
+  .page-review__slider {
+    max-width: 768px;
+    margin: 0 auto;
+    margin-top: 220px;
+  }
 }
 
 @media @desktop-widths {
   .page-review {
+    position: relative;
     background-color: @base-color-reverse;
 
     p {
@@ -190,6 +197,18 @@
       padding-top: 70px;
       padding-bottom: 40px;
       padding-left: 38px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 160px;
+      right: 0;
+      width: 27%;
+      height: 459px;
+
+      background-color: @slider-color-light;
+      z-index: 2;
     }
   }
 
@@ -217,7 +236,10 @@
   }
 
   .page-review__slider {
+    max-width: auto;
     flex-basis: 54%;
+    margin: 0;
+    margin-top: 0;
   }
 
   .page-review__stats {
