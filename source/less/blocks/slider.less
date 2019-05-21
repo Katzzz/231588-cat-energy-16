@@ -102,20 +102,19 @@
 
       border-radius: 50%;
       box-shadow: 0 0 0 12px #ffffff,
-                  0 0 0 13px @base-color-reverse-darken;
+        0 0 0 13px @base-color-reverse-darken;
 
       &:hover {
         box-shadow: 0 0 0 12px #ffffff,
-                    0 0 0 13px @base-color-reverse-darken,
-                    0 15px 2px @base-color-reverse-darken;
+          0 0 0 13px @base-color-reverse-darken,
+          0 15px 2px @base-color-reverse-darken;
       }
 
       &:active {
         box-shadow: 0 0 0 12px @base-color,
-                    0 0 0 13px @base-color-reverse-darken,
-                    0 15px 2px @base-color-reverse-darken;
+          0 0 0 13px @base-color-reverse-darken,
+          0 15px 2px @base-color-reverse-darken;
       }
-
     }
   }
 
@@ -160,6 +159,7 @@
 
 @media @desktop-widths {
   .slider {
+    position: relative;
     margin-top: 0;
   }
 
@@ -172,6 +172,11 @@
     &::after,
     &::before {
       top: 372px;
+      z-index: 5;
+    }
+
+    &::after {
+      z-index: 4;
     }
   }
 
@@ -181,6 +186,7 @@
 
     &--right {
       padding-right: 42px;
+      z-index: 3;
     }
   }
 }
