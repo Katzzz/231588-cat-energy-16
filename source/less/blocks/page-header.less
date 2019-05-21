@@ -179,6 +179,10 @@
 }
 
 @media @desktop-widths {
+  .page-header {
+    position: relative;
+  }
+
   .page-header__top {
     display: flex;
     justify-content: space-between;
@@ -208,12 +212,13 @@
 
   .page-header__bottom {
     .container();
+    position: static;
 
     &::before {
       width: 552px;
       height: 499px;
-      top: 29px;
-      left: 491px;
+      top: 141px;
+      left: 41%;
 
       background-image: url("../img/index-can-desktop@1x.png");
 
@@ -226,20 +231,21 @@
     &::after {
       content: "";
       position: absolute;
-      width: 650px;
+      width: 50%;
       height: 696px;
       right: 0;
-      top: -116px;
+      top: -80px;
       z-index: -99;
 
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: 100%;
       background-color: @base-color;
-      background-position: center 20%;
+      background-position: center right;
       background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
-        background-size: cover;
+        background-size: 100%;
       }
     }
   }
