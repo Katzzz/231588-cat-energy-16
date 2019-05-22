@@ -27,8 +27,6 @@
 }
 
 .form__item {
-  position: relative;
-
   color: @lighten-font-color;
 
   textarea {
@@ -56,6 +54,10 @@
     border-top: 1px solid @input-border-color;
     border-bottom: 1px solid @input-border-color;
   }
+}
+
+.form__block {
+  position: relative;
 
   &--decoration {
     width: 100%;
@@ -320,7 +322,9 @@
       width: 100%;
       top: 51px;
     }
+  }
 
+  .form__block {
     &--decoration {
       height: 70px;
 
@@ -554,6 +558,13 @@
       margin-left: 0;
     }
 
+    &--decoration {
+      height: 62px;
+      padding-top: 13px;
+    }
+  }
+
+  .form__block {
     &--decoration {
       height: 62px;
       padding-top: 13px;
